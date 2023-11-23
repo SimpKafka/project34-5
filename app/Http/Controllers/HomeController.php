@@ -30,5 +30,11 @@ class HomeController extends Controller
     public function admin(){
         return view('admin.index');
     }
+    public function home(){
+        return view('welcome');
+    }
+    public function products(){
+        return view('product');
+    }
 
 }

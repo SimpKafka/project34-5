@@ -4,64 +4,64 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard V.1 | Nalika - Material Admin Template</title>
+    <title>Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('backend/img/favicon.ico')}}">
+    <link rel="shortcut icon" type="{{ asset('backend/image/x-icon') }}" href="{{ asset('backend/img/logo/logoBackend.png') }}">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/bootstrap.min.css') }}">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/font-awesome.min.css') }}">
 	<!-- nalika Icon CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/nalika-icon.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/nalika-icon.css') }}">
     <!-- owl.carousel CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('backend/css/owl.theme.css')}}">
-    <link rel="stylesheet" href="{{asset('backend/css/owl.transitions.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/owl.transitions.css') }}">
     <!-- animate CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/animate.css') }}">
     <!-- normalize CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/normalize.css') }}">
     <!-- meanmenu icon CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/meanmenu.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/meanmenu.min.css') }}">
     <!-- main CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/main.css') }}">
     <!-- morrisjs CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/morrisjs/morris.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/morrisjs/morris.css') }}">
     <!-- mCustomScrollbar CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/scrollbar/jquery.mCustomScrollbar.min.css') }}">
     <!-- metisMenu CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/metisMenu/metisMenu.min.css')}}">
-    <link rel="stylesheet" href="{{asset('backend/css/metisMenu/metisMenu-vertical.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/metisMenu/metisMenu.min.css') }}">
+    <link rel="stylesheet" href="{{asset('backend/css/metisMenu/metisMenu-vertical.css') }}">
     <!-- calendar CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/calendar/fullcalendar.min.css')}}">
-    <link rel="stylesheet" href="{{asset('backend/css/calendar/fullcalendar.print.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/calendar/fullcalendar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/calendar/fullcalendar.print.min.css') }}">
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="{{asset('backend/style.css')}}">
     <!-- responsive CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{asset('backend/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/responsive.css') }}">
     <!-- modernizr JS
 		============================================ -->
-    <script src="{{asset('backend/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+    <script src="{{ asset('backend/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body>
@@ -72,13 +72,12 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="{{asset('backend/img/logo/logo.png')}}" alt="" /></a>
                 <strong><img src="{{asset('backend/img/logo/logosn.png')}}" alt="" /></strong>
             </div>
 			<div class="nalika-profile">
 				<div class="profile-dtl">
-					<a href="#"><img src="{{asset('backend/img/notification/4.jpg')}}" alt="" /></a>
-					<h2>Lakian <span class="min-dtn">Das</span></h2>
+					<a href="{{ route('frontend.index') }}"><img src="{{asset('backend/img/logo/logo Kai Wan Ban Sushi.jpg')}}" alt="" /></a>
+					<h2>KaiWan Ban Sushi</h2>
 				</div>
 				<div class="profile-social-dtl">
 				
@@ -99,8 +98,12 @@
 								   <span>Promotion</span>
 								</a>
                         </li>
-               
-
+                        <li class="active">
+                            <a  href="{{route('dashboard')}}">
+                                <i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i>
+								   <span>Return to Dashboard</span>
+								</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -317,19 +320,17 @@
             </div>
             <!-- Mobile Menu end -->
 
-@yield('con')
+        @yield('con')
 
         <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="footer-copy-right">
-                            <p>Copyright © 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
     <!-- jquery
 		============================================ -->
